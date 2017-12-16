@@ -5,7 +5,7 @@
 
 The purpose of this project is like below,
 
-- write gulpfile with ecma 6, and run this with bable, which is for transcripting ecma6 to js.
+- write gulpfile with ecma 6, and run this with babel, which is for transcripting ecma6 to js.
 - write js files with typescript (.ts)
 - use gulp to auto build this project whenever there is somthing edited on .ts, idex.htm and lib folder, and auto reload my browser!
 
