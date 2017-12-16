@@ -15,20 +15,20 @@
       Wow! it will be replaced by jQuery! lol!
     </div>
 
-
-
-
+    <div id="ts"></div>
 
     <script src="lib/jQuery/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="lib/angular/angular.min.js" charset="utf-8"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/Person.js" charset="utf-8"></script>
-    <script type="text/javascript">
+    <script src="js/1-types.js" charset="utf-8"></script>
+    <script src="js/2-declarations.js" charset="utf-8"></script>
 
-    $(document).ready(function() {
-        var visitor = new Person("jquery", "min");
-        $('.jquery').html(visitor.fullName);
-      });
+    <script type="text/javascript">
+      $(document).ready(function() {
+          var visitor = new Person("jquery", "min");
+          $('.jquery').html(visitor.fullName);
+        });
     </script>
 
   </body>
