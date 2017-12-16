@@ -27,7 +27,7 @@ gulp.task("ts", () => {
          noImplicitAny: true,
      }))
      // .pipe(uglify())
-    .pipe(gulp.dest(dist + "/"));
+    .pipe(gulp.dest(dist + "/js"));
 });
 
 gulp.task("copy", () => {
@@ -55,7 +55,7 @@ gulp.task('watch', function () {
 });
 
 // running webserver
-gulp.task('server', ["html"], function () {
+gulp.task('server', ["html", "copy", "ts"], function () {
   return gulp.src(dist + '/')
   .pipe(webserver({
     host: "localhost",
@@ -68,7 +68,5 @@ gulp.task('server', ["html"], function () {
 
 gulp.task("default", [
   "watch",
-  "ts",
-  "copy",
   "server"
 ]);
