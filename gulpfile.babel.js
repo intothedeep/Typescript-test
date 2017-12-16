@@ -16,7 +16,9 @@ const index = dist + "/index.html";
 
 const paths = {
   html: src +"/**/*.html",
-  ts: src + "/ts/*.ts"
+  ts: src + "/js/*.ts",
+  js: src + "/js/*.js",
+  css: src + "/css/*.css"
 };
 
 gulp.task("ts", () => {
@@ -25,8 +27,14 @@ gulp.task("ts", () => {
          noImplicitAny: true,
      }))
      // .pipe(uglify())
-    .pipe(gulp.dest(dist + "/js"));
+    .pipe(gulp.dest(dist + "/"));
 });
+
+gulp.task("copy", () => {
+  return gulp.src("src/lib/**/*")
+    .pipe(gulp.dest(dist + "/lib"));
+});
+
 
 gulp.task("html", () => {
   return gulp.src(paths.html)
@@ -42,11 +50,12 @@ gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch(paths.ts, ['ts']);
 	gulp.watch(paths.html, ['html']);
+  gulp.watch(src + "/lib/*", ['copy']);
 	gulp.watch(dist + '/**').on('change', livereload.changed);
 });
 
 // running webserver
-gulp.task('server', function () {
+gulp.task('server', ["html"], function () {
   return gulp.src(dist + '/')
   .pipe(webserver({
     host: "localhost",
@@ -60,6 +69,6 @@ gulp.task('server', function () {
 gulp.task("default", [
   "watch",
   "ts",
-  "html",
+  "copy",
   "server"
 ]);

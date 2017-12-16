@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
+
     <title> babel-gulp-typescript-test</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/theme/default/bootstrap.css">
+
   </head>
   <body>
-    <script type="text/javascript">
-      console.log("say! hello!");
-    </script>
+    <div class="">
+      change Hello! Awsome!
+    </div>
+    <div class="jquery">
+      Wow! it will be replaced by jQuery! lol!
+    </div>
+
+
+
+
+
+    <script src="lib/jQuery/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="lib/angular/angular.min.js" charset="utf-8"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/Person.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        var visitor = new Person("jquery", "min");
+        $('.jquery').html(visitor.fullName);
+      });
+    </script>
+
   </body>
 </html>
