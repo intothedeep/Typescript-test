@@ -1,11 +1,11 @@
 class Person {
-  fullName : string;
+  public fullName: string;
 
-  constructor ( public firstName:string, public lastName:string ) {
+  constructor ( public firstName: string, public lastName: string ) {
     this.fullName = firstName + " " + lastName;
   }
 
-  public say ():void {
+  public say (): void {
     console.log(this.fullName);
   }
 

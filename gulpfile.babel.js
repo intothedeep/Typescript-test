@@ -70,7 +70,8 @@ gulp.task('server', ["html", "copy", "ts"], function () {
 gulp.task("tslint", function(){
   return   gulp.src("./src/js/Person.ts")
          .pipe(tslint({
-            formatter: "verbose"
+            formatter: "verbose",
+            configuration: "tslint.json"
           }))
          // .pipe(tslint.report());
          .pipe(tslint.report({
