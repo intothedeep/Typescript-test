@@ -7,7 +7,7 @@
 
 // after interface
 interface LabelledValue {
-  label : string;
+  label : string; 
 }
 function printLabel ( labelledObj : LabelledValue ) {
     console.log(labelledObj);
