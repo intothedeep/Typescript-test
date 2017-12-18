@@ -21,8 +21,8 @@ enum Color {
   g,
   b
 }
-let c : Color = Color.r;
-console.log(c);
+let c1 : Color = Color.r;
+console.log(c1);
 let cs : string = Color[2];
 console.log(cs);
 

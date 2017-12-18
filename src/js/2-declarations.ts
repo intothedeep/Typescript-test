@@ -73,8 +73,8 @@
 
 
 // ----------Destructuring
-let a : Array = [1, 2, 3];
-let [x, y] = a;
+let arr : Array<number> = [1, 2, 3];
+let [x, y] = arr;
 console.log(x);
 console.log(y);
 console.log("-------");
@@ -84,19 +84,19 @@ console.log(x);
 console.log(y);
 console.log("-------");
 
-let [x, ...y] = a;
+let [x, ...y] = arr;
 console.log(x);
 console.log(y);
 console.log("-------");
 
-let [x:xx = 99, y:yy] = a;
+let [x:xx = 99, y:yy] = arr;
 console.log(xx);
 console.log(yy);
 console.log(y);
 console.log("-------");
 
 // ? => optional!!!!!
-function keepWholeObject(wholeObject: { a: string, b?: number }) {
+function keepWholeObject(wholeObject: { a:string, b?: number }) {
     let { a, b = 1001 } = wholeObject;
 }
 

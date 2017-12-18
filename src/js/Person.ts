@@ -11,7 +11,7 @@ class Person {
 
 }
 
-let p1 : Person;
-p1 = new Person("victor", "ts");
-p1.say();
-console.log(p1.fullName);
+let p123 : Person;
+p123 = new Person("victor", "ts");
+p123.say();
+console.log(p123.fullName);
