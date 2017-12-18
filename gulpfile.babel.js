@@ -8,6 +8,7 @@ import livereload from 'gulp-livereload';
 import webserver from 'gulp-webserver';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
+import tslint from 'gulp-tslint';
 const htmlmin = require('gulp-htmlmin');
 
 const src = "src";
@@ -65,6 +66,17 @@ gulp.task('server', ["html", "copy", "ts"], function () {
     open: ""
   }));
 });
+
+gulp.task("tslint", function(){
+  return   gulp.src("./src/js/Person.ts")
+         .pipe(tslint({
+            formatter: "verbose"
+          }))
+         // .pipe(tslint.report());
+         .pipe(tslint.report({
+            emitError: false
+          }))
+ });
 
 gulp.task("default", [
   "watch",
