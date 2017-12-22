@@ -14,7 +14,7 @@ const htmlmin = require('gulp-htmlmin');
 const src = "src";
 const dist = "dist/src";
 const index = dist + "/index.html";
-
+ 
 const paths = {
   html: src +"/**/*.html",
   ts: src + "/js/*.ts",

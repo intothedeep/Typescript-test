@@ -10,7 +10,7 @@ class Person {
   }
 
 }
-
+ 
 let p123: Person;
 p123 = new Person("victor", "ts");
 p123.say();

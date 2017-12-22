@@ -3,3 +3,4 @@ class visitor extends Person {
     console.log(this.fullName + " is a visitor!!!");
   }
 }
+  

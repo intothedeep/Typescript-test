@@ -2,18 +2,22 @@ let wow : number;
 wow = 10;
 
 
-interface Wow {
+interface Human {
   readonly target : string;
 }
 
-class Enemy implements Wow {
+class Enemy implements Human {
   public hp : number;
-  readonly target : string;
+  readonly target : string; 
 
-  constructor ( ) {
+  constructor (public lastName: string, public firstName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
   public attack ( att : number) : number {
     return 10;
   }
-} 
+
+
+}
